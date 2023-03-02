@@ -75,8 +75,10 @@
                                             <trix-editor input="body"></trix-editor>
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary btn-sm">Create Post</button>
-                                        <br><br>
+                                        <div class="mt-3">
+                                            <input type="submit" value="Update" id="save" name="save"
+                                                class="btn btn-primary">
+                                        </div>
                                     </form>
                                 </div>
                             </div>

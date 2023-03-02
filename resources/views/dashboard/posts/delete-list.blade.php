@@ -26,14 +26,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($postdeleted as $post)
+                                        @foreach ($postdeleted as $data)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>{{ $post->title }}</td>
-                                                <td>{{ $post->category->name }}</td>
-                                                <td>{{ $post->author->name }}</td>
+                                                <td>{{ $data->title }}</td>
+                                                <td>{{ $data->category->name }}</td>
+                                                <td>{{ $data->author->name }}</td>
                                                 <td>
-                                                    <a href="posts/{{ $post->id }}/restore"
+                                                    <a href="data/{{ $data->id }}/restore"
                                                         class="btn btn-info btn-sm">Restore</a>
                                                 </td>
                                             </tr>

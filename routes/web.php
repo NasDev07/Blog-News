@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController as UserHomeController;
 use App\Http\Controllers\UserController as adminUserController;
 use App\Http\Controllers\adminCategoryController as adminCategoryController;
 use App\Http\Controllers\DashboardPostController as adminDashboardPostController;
+use App\Http\Controllers\SofdeletedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +24,13 @@ use App\Http\Controllers\DashboardPostController as adminDashboardPostController
 */
 
 // untuk client / umum port berita
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', [UserHomeController::class, 'index']);
+// Route::get('/', [UserHomeController::class, 'index']);
 // Halaman single post
-Route::get('posts/{post:slug}', [UserHomeController::class, 'show']);
+// Route::get('posts/{post:slug}', [UserHomeController::class, 'show']);
 
 
 
@@ -59,10 +60,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('posts', adminDashboardPostController::class);
-
-    Route::get('/postsDelete', [adminDashboardPostController::class, 'postsdel']);
-    Route::get('/post/{id}/restore', [adminDashboardPostController::class, 'restore']);
 });
+
+Route::get('/dataDelete', [SofdeletedController::class, 'postsdel'])->middleware('auth');
+Route::get('/data/{id}/restore', [SofdeletedController::class, 'restore'])->middleware('auth');
 
 
 

@@ -16,12 +16,12 @@ class PostController extends Controller
         return view('welcome', ['posttList' => $post]);
     }
 
-    public function show(Post $post)
-    {
-        return view('post', [
-            "title" => "Single Post",
-            "post" => $post,
-            "active" => "posts",
-        ]);
-    }
+    // public function show(Post $post)
+    // {
+    //     return view('post', [
+    //         "title" => "Single Post",
+    //         "post" => $post,
+    //         "active" => "posts",
+    //     ]);
+    // }
 }

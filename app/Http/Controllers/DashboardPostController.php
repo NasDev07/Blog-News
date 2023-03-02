@@ -137,21 +137,4 @@ class DashboardPostController extends Controller
             return redirect()->back()->with(['failed' => 'Ada kesalahan system']);
         }
     }
-
-    public function postsdel()
-    {
-        $menuPosts = 'active';
-        $postdeleted = Post::onlyTrashed('user_id', auth()->user()->id)->get();
-        return view('dashboard.posts.delete-list', [
-            'postdeleted' => $postdeleted,
-            'menuPosts' =>  $menuPosts,
-        ]);
-    }
-
-    public function restore($id)
-    {
-        Post::withTrashed()->where('id', $id,)->restore();
-
-        return redirect()->back()->with(['success' => 'successfully']);
-    }
 }

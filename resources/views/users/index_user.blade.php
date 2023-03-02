@@ -5,7 +5,7 @@
         <h4 class="fw-bold py-3 mb-4">
             <span class="text-muted fw-light">Users /</span> List
         </h4>
-        <a href="/postDelete" class="btn btn-info btn-sm mb-2">Show Deleted Data Post</a>
+        <a href="/dataDelete" class="btn btn-info btn-sm mb-2">Show Deleted Data Post</a>
         <div class="row">
             <div class="col-lg-12 mb-4 order-0">
                 <div class="card">

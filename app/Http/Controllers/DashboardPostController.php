@@ -16,7 +16,6 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
-
         $posts = Post::where('user_id', auth()->user()->id)->get();
         $menuPosts = 'active';
         return view('dashboard.posts.index', compact('menuPosts', 'posts'));

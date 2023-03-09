@@ -43,8 +43,8 @@
     <script src="{{ asset('/assets/vendor/js/helpers.js') }}"></script>
 
     {{-- trix --}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('/assets/css/trix.css') }}">
-    <script type="text/javascript" src="{{ asset('/assets/js/trix.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->

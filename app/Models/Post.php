@@ -12,11 +12,35 @@ class Post extends Model
 {
     use HasFactory, SoftDeletes;
 
-    // protected $fillable = [
-    //     'category_id', 'user_id', 'title', 'slug', 'image'
-    // ];
     protected $guarded = ['id'];
     protected $with = ['author', 'category'];
+
+    // serach
+    public function scopeFIlter($query, array $filters)
+    {
+        $query->when($filters['search'] ?? false, function ($query, $search) {
+            return $query->where('title', 'like', '%' . $search . '%') // like %search%
+                ->orWhere('body', 'like', '%' . $search . '%')
+                ->orWhere('excerpt', 'like', '%' . $search . '%');
+        });
+
+        $query->when($filters['category'] ?? false, function ($query, $category) {
+            return $query->whereHas('category', function ($query) use ($category) {
+                $query->where('slug', $category);
+            });
+        });
+
+        $query->when(
+            $filters['author'] ?? false,
+            fn ($query, $category) =>
+            $query->whereHas(
+                'author',
+                fn ($query) =>
+                $query->where('username', $category)
+            )
+        );
+    }
+
 
     public function category()
     {

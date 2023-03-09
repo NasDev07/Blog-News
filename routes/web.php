@@ -1,37 +1,26 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 // User
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PostController as UserHomeController;
+use App\Models\Category;
+use Illuminate\Support\Facades\Route;
 
 // Admin
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SofdeletedController;
+use App\Http\Controllers\PostController as UserHomeController;
 use App\Http\Controllers\UserController as adminUserController;
 use App\Http\Controllers\adminCategoryController as adminCategoryController;
 use App\Http\Controllers\DashboardPostController as adminDashboardPostController;
-use App\Http\Controllers\SofdeletedController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
-// untuk client / umum port berita
-Route::get('/', function () {
-    return view('welcome');
-});
 
-// Route::get('/', [UserHomeController::class, 'index']);
+
+
+Route::resource('/', [UserHomeController::class, 'index']);
 // Halaman single post
-// Route::get('posts/{post:slug}', [UserHomeController::class, 'show']);
-
+// Route::get('posts-detail/{id}', [UserHomeController::class, 'show']);
 
 
 // perbaikan dari Nas untuk user & admin

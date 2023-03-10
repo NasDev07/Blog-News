@@ -20,6 +20,7 @@
                         <li><a href="single-post.html"><i class="bi bi-chevron-right"></i> Single Post</a></li>
                         <li><a href="about.html"><i class="bi bi-chevron-right"></i> About us</a></li>
                         <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                        <li><a href="{{route('login')}}"><i class="bi bi-chevron-right"></i> Login</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">

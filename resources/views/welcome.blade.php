@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets_user/img/favicon.png" rel="icon">
-    <link href="assets_user/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('assets_user/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets_user/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,15 +21,15 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets_user/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets_user/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets_user/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets_user/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets_user/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS Files -->
-    <link href="assets_user/assets/css/variables.css" rel="stylesheet">
-    <link href="assets_user/assets/css/main.css" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/css/variables.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets_user/assets/css/main.css') }}" rel="stylesheet">
 
     {{-- trix --}}
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
@@ -123,14 +123,14 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="assets_user/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets_user/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets_user/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets_user/assets/vendor/aos/aos.js"></script>
-    <script src="assets_user/assets/vendor/php-email-form/validate.js"></script>
+    <script src="{{ asset('assets_user/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_user/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets_user/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets_user/assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets_user/assets/vendor/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets_user/assets/js/main.js"></script>
+    <script src="{{ asset('assets_user/assets/js/main.js') }}"></script>
 
 </body>
 
